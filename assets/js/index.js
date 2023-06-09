@@ -1,6 +1,5 @@
 AOS.init();
 window.addEventListener("scroll",function (e){
-    console.log(window.scrollY)
     var squared = document.querySelector(".trapezoid");
     squared.classList.toggle("trapezoid-hide",window.scrollY > 150);
     if (window.scrollY > 50 && window.scrollY < 700){

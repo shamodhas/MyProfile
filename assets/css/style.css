@@ -696,7 +696,7 @@ header nav ul li a.active-nav-btn{
 .btn-contact:hover{
 
 }
-/*____________*/
+
 @media (max-width: 600px) {
     .gallery-list {
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));

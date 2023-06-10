@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIT</title>
+    <style>
+        #light-panel .light{
+            width: 50px;
+            height: 20px;
+            /*border: 1px solid gray;*/
+            display: inline-block;
+            margin: 0;
+        }
+        #light-panel{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<button id="btn-start">Start</button>
+<button id="btn-stop">Stop</button>
+<section id="light-panel">
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+</section>
+<audio loop id="audio" src="assets/audio/Knight-Rider-Theme-Song.mp3"></audio>
+<script src="assets/lib/jQuery/jquery-3.6.4.min.js"></script>
+<script>
+    var lightNumber = 0;
+    var direction = "RIGHT";
+    var lights = $('.light');
+    var interval = null;
+    function updateLights() {
+        lights.css({background: 'white'});
+        lights[lightNumber].style.background = 'red';
+        if (lightNumber > 0) lights[lightNumber - 1].style.background = 'pink';
+        if (lightNumber < lights.length -1) lights[lightNumber + 1].style.background = 'pink';
+        if (lightNumber === lights.length -1) direction = "LEFT";
+        if (lightNumber === 0) direction = "RIGHT";
+        if (direction === 'RIGHT') lightNumber++;
+        else lightNumber--;
+    }
+    // let interval = setInterval(updateLights, 50);
+    $('#btn-start').on('click', ()=>{
+        clearInterval(interval); // -> optional
+        interval = setInterval(updateLights, 50);
+
+        $('#audio')[0].play();
+
+        // $('#audio').trigger('play');
+    })
+    $('#btn-stop').on('click', ()=>{
+        clearInterval(interval);
+
+        $('#audio')[0].pause();
+
+        // $('#audio').trigger('pause');
+    })
+
+</script>
+</body>
+</html>

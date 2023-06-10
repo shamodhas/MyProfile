@@ -224,9 +224,9 @@ header nav ul li a.active-nav-btn{
     background-color: #D9D9D9;
 }
 #assigment .link-model-assigment{
+    /*color: #0a53be;*/
     display: block;
     font-size: 18px;
-    text-decoration: none;
 }
 #assigment .btn-assigment::before {
     transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);

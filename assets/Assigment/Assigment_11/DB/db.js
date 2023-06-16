@@ -23,10 +23,7 @@ export function saveCustomerDB(customer) {
 export function updateCustomerDB(customer) {
     let customer_data_arr = getAllCustomerDB();
     let index = customer_data_arr.findIndex(existsCustomer => existsCustomer._customer_id === customer.customer_id );
-    customer_data_arr[index].customer_nic = customer.customer_nic;
-    customer_data_arr[index].customer_name = customer.customer_name;
-    customer_data_arr[index].customer_salary = customer.customer_salary;
-    customer_data_arr[index].customer_address = customer.customer_address;
+    customer_data_arr[index] = customer;
     localStorage.setItem(customerData, JSON.stringify(customer_data_arr));
 }
 
@@ -58,9 +55,7 @@ export function saveItemDB(item) {
 export function updateItemDB(item) {
     let item_data_arr = getAllItemDB();
     let index = item_data_arr.findIndex(existsItem => existsItem._item_code === item.item_code )
-    item_data_arr[index].item_name = item.item_name;
-    item_data_arr[index].item_price = item.item_price;
-    item_data_arr[index].item_quantity = item.item_quantity;
+    item_data_arr[index] = item;
     localStorage.setItem(itemData, JSON.stringify(item_data_arr));
 }
 

@@ -3,6 +3,9 @@
     padding: 0;
     font-family: sans-serif;
 }
+body{
+    overflow-x: hidden;
+}
 #assigment,#skill,#about{
      background-color: #ffffff;
  }
@@ -75,11 +78,20 @@ header nav ul li a.active-nav-btn{
     cursor: pointer;
     display: none;
 }
+
 #main{
-    padding-top: 50px;
+    padding-top: 80px;
 }
+
 #main .row > div{
     margin-top: 40px;
+}
+.home-my-image img{
+    border-radius: 45px;
+    width: 330px;
+}
+#main .home-my-image img:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .social-media{
     display: flex;
@@ -102,9 +114,7 @@ header nav ul li a.active-nav-btn{
 .icon:hover{
     width: 200px;
     cursor: pointer;
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
     color: #ffffff;
 }
 .icon:hover i{
@@ -140,20 +150,24 @@ header nav ul li a.active-nav-btn{
 .instagram:hover{
     background: linear-gradient(to right,#833AB4,#FD1D1D,#FCB045);
 }
-.home-name{
-    font-size: 60px;
+.home-name span{
+    font-size: 48px;
     color: #F1C40F;
-    font-family: Anek Bangla Bold,"Bell MT",serif;
+    font-family: 'Monoton', cursive;
 }
-.home-job{
+
+.home-job,
+.home-job span{
     font-size: 30px;
-    color: #6e7879;
-    font-family: Anek Bangla Bold,"Bell MT",serif;
+    color: #7c8888;
+    font-family: 'Stardos Stencil', cursive;
 }
 .home-about{
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     color: #6E7879FF;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
 }
 .btn-rounded {
     width: 150px;
@@ -179,6 +193,7 @@ header nav ul li a.active-nav-btn{
     background-position: 100%;
     color: #ffb400;
 }
+
 #project>h1{
     margin: 8px 0;
     text-align: center;
@@ -265,8 +280,12 @@ header nav ul li a.active-nav-btn{
 }
 #service .box{
     padding: 25px 10px;
+    border-radius: 25px;
     margin: 25px;
     background-color: #ffffff;
+}
+#service .box:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 #service img{
     width: 60px;
@@ -396,7 +415,9 @@ header nav ul li a.active-nav-btn{
     animation: fadeIn 1s linear forwards;
     animation-delay: 2.5s;
 }
-
+.content{
+    height: 206px;
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -452,9 +473,9 @@ header nav ul li a.active-nav-btn{
     font-size: 1.5rem;
 }
 
-.sololearn-img{
+.solo-learn-img{
     border-radius: 15px;
-    border:5px solid #570000;
+    border:3px solid #000000;
 }
 .hover-effect {
     width: 100%;
@@ -789,7 +810,7 @@ header nav ul li a.active-nav-btn{
     #assigment .btn-assigment{
         font-size: 18px;
     }
-    .home-name{
+    .home-name span{
         text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
     }
     #main .row > div{
@@ -798,10 +819,11 @@ header nav ul li a.active-nav-btn{
     #main{
         height: 1000px;
     }
-    .myImage{
+    .home-my-image{
         margin-top: 0;
     }
     header{
+
         padding: 0 20px;
     }
     .menu-toggle{
@@ -810,7 +832,7 @@ header nav ul li a.active-nav-btn{
         background-color: #333333;
         position: absolute;
         top: 0;
-        left: 10px;
+        left: 0;
         padding: 0 20px;
         width: 100%;
         box-sizing: border-box;

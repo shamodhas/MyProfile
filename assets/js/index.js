@@ -1,18 +1,15 @@
 AOS.init();
 window.addEventListener("scroll",function (e){
-    var squared = document.querySelector(".trapezoid");
+    const squared = document.querySelector(".trapezoid");
     squared.classList.toggle("trapezoid-hide",window.scrollY > 150);
-    if (window.scrollY > 50 && window.scrollY < 700){
-        $('#project-heading').toggleClass("animate__animated animate__swing");
-    }
     if ($(window).width() < 992){
-        skillLoad(2000, 5094);
+        skillLoad(4000, 6000);
     }else {
         skillLoad(2400, 3401);
-        var header = document.querySelector("header");
+        const header = document.querySelector("header");
         header.classList.toggle("sticky",window.scrollY > 0)
     }
-})
+});
 
 function skillLoad(start, down){
     if(window.scrollY < start || window.scrollY > down ){
@@ -20,22 +17,25 @@ function skillLoad(start, down){
     }else {
         $('.percent').css("display", "block")
     }
-}
+};
 
 $('.menu-toggle').click(function(){
     $('nav').toggleClass('active');
-})
+});
 
 
-var gallery = document.querySelector('#gallery-list');
-var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
-var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
-var resizeAll = function () {
-    var altura = getVal(gallery, 'grid-auto-rows');
-    var gap = getVal(gallery, 'grid-row-gap');
+const gallery = document.querySelector('#gallery-list');
+const getVal = function (elem, style) {
+    return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
+};
+const getHeight = function (item) {
+    return item.querySelector('.content').getBoundingClientRect().height;
+};
+const resizeAll = function () {
+    const altura = getVal(gallery, 'grid-auto-rows');
+    const gap = getVal(gallery, 'grid-row-gap');
     gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-        var el = item;
-        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+        item.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
     });
 };
 gallery.querySelectorAll('img').forEach(function (item) {
@@ -45,18 +45,40 @@ gallery.querySelectorAll('img').forEach(function (item) {
     }
     else {
         item.addEventListener('load', function () {
-            var altura = getVal(gallery, 'grid-auto-rows');
-            var gap = getVal(gallery, 'grid-row-gap');
-            var gitem = item.parentElement.parentElement;
+            const altura = getVal(gallery, 'grid-auto-rows');
+            const gap = getVal(gallery, 'grid-row-gap');
+            const gitem = item.parentElement.parentElement;
             gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
             item.classList.remove('byebye');
         });
     }
 });
+
 window.addEventListener('resize', resizeAll);
 gallery.querySelectorAll('.gallery-item').forEach(function (item) {
     item.addEventListener('click', function () {
         item.classList.toggle('full');
     });
 });
+
+const textWrapper = document.querySelector('.home-job');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({ loop: true })
+    .add({
+        targets: '.home-job .letter',
+        scale: [4, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: (el, i) => 70 * i
+    }).add({
+    targets: '.home-job',
+    opacity: 0,
+    duration: 0,
+    easing: "easeOutExpo",
+    delay: 0
+});
+
 

@@ -3,7 +3,7 @@ window.addEventListener("scroll",function (e){
     const squared = document.querySelector(".trapezoid");
     squared.classList.toggle("trapezoid-hide",window.scrollY > 150);
     if ($(window).width() < 992){
-        skillLoad(4000, 6000);
+        skillLoad(3000, 5000);
     }else {
         skillLoad(2400, 3401);
         const header = document.querySelector("header");

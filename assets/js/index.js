@@ -83,6 +83,8 @@ anime.timeline({ loop: true })
 });
 
 // project carousel
+var project_name = ['Desktop Application 1', 'Desktop Application 2', 'Desktop Application 3', 'Desktop Application 4', 'Web Application 5', 'Figma Design 6', 'Mobile Application 7', 'Web Application 8'];
+var project_index = 0;
 window.addEventListener('load', () => {
     var
         carousels = document.querySelectorAll('.my-project-carousel');
@@ -127,20 +129,25 @@ function carousel(root) {
             e.stopPropagation();
 
             var t = e.target;
-            if (t.tagName.toUpperCase() != 'BUTTON')
+            if (t.tagName.toUpperCase() !== 'BUTTON')
                 return;
-
+            // if(project_index === 7) project_index = 0;
             if (t.classList.contains('next')) {
+                project_index++;
                 currImage++;
             } else
             {
+                project_index--;
                 currImage--;
             }
-
             rotateCarousel(currImage);
         }, true);
     }
     function rotateCarousel(imageIndex) {
+        if (project_index < 0) project_index = project_index + 8;
+        if (project_index > 7) project_index = project_index - 8;
         figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
+        $('.my-project-header h5').text(project_name[project_index])
+        console.log(project_index)
     }
 }

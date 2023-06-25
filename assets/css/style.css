@@ -241,6 +241,16 @@ header nav ul li a.active-nav-btn{
     justify-content: center;
     margin: 20px 0 0;
 }
+.my-project-carousel .project-carousel-nav div {
+    width: 75%
+}
+.my-project-carousel .project-carousel-nav div h5{
+    font-weight: bold;
+}
+.my-project-carousel .project-carousel-nav div p{
+    font-size: 13px;
+}
+
 .my-project-carousel .project-carousel-nav button {
     border-radius: 50%;
     width: 50px;

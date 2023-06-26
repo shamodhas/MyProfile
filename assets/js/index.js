@@ -83,12 +83,20 @@ anime.timeline({ loop: true })
 });
 
 // project carousel
-var project_name = ['Desktop Application 1', 'Desktop Application 2', 'Desktop Application 3', 'Desktop Application 4', 'Web Application 5', 'Figma Design 6', 'Mobile Application 7', 'Web Application 8'];
-var project_index = 0;
+const project_name = [
+    ['Group Chat Application', 'Group chat application implementing java socket programming', 'https://github.com/shamodhas/Group-Chat-Application'],
+    ['Computer Shop Management System', 'Computer Shop Management software implementing Layered Architecture', 'https://github.com/shamodhas/csms-layered-architecture'],
+    ['Connect Four Game', 'Connect Four Game implementing Oop Concept', 'https://github.com/shamodhas/Connect-Four-Game'],
+    ['Hostel Management System', 'Hostel Management System implementing Orm Concept', 'https://github.com/shamodhas/Hostel-Management-System'],
+    ['Css Playing Car', 'Css Playing Car implementing Html , Css', 'https://github.com/shamodhas/Internet-Technologies-Assignment-04'],
+    ['Point Of Sale System', 'Pos System Html, Css, JavScript', 'https://github.com/shamodhas/Internet-Technologies-Assignment-11'],
+    ['Warehouse Management System', 'Warehouse Management System implementing Java Swing', 'https://github.com/shamodhas/Warehouse-Management-System'],
+    ['Test', 'test']
+];
+let project_index = 0;
 window.addEventListener('load', () => {
-    var
-        carousels = document.querySelectorAll('.my-project-carousel');
-    for (var i = 0; i < carousels.length; i++) carousel(carousels[i]);
+    const carousels = document.querySelectorAll('.my-project-carousel');
+    for (let i = 0; i < carousels.length; i++) carousel(carousels[i]);
 });
 function carousel(root) {
     var
@@ -147,7 +155,9 @@ function carousel(root) {
         if (project_index < 0) project_index = project_index + 8;
         if (project_index > 7) project_index = project_index - 8;
         figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
-        $('.my-project-header h5').text(project_name[project_index])
+        $('.my-project-header h5').text(project_name[project_index][0])
+        $('.my-project-header p').text(project_name[project_index][1])
+        $('.my-project-header a').attr('href', project_name[project_index][2]);
         console.log(project_index)
     }
 }

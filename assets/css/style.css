@@ -242,7 +242,7 @@ header nav ul li a.active-nav-btn{
     margin: 20px 0 0;
 }
 .my-project-carousel .project-carousel-nav div {
-    width: 75%
+    width: 400px;
 }
 .my-project-carousel .project-carousel-nav div h5{
     font-weight: bold;

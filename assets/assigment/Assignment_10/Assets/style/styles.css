@@ -1,0 +1,41 @@
+#body{
+    background-color: #eef3ff;
+}
+body > div{
+    margin-top: 20px;
+}
+.btn-calc{
+    width: 100%;
+    height: calc(90vh/7);
+    border-radius: 5px !important;
+    color: #FFFFFF;
+    background-color: #0a53be;
+    border: 0;
+}
+.input-button{
+    background-color: #2768cc;
+}
+.btn-calc:hover{
+    background-color: #0c63e4;
+}
+.btn-calc:active{
+    background-color: #003c9d;
+}
+.row{
+    border: 3px solid transparent;
+}
+.col-3, .col-6{
+    padding: 1px !important;
+}
+#lblOldValue{
+    font-size: 18px;
+    text-align: right;
+    width: 100%;
+}
+#lblNewValue{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 25px;
+}

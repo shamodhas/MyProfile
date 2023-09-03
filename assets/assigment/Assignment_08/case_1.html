@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Script Queue (08-01)</title>
+    <style>
+        body{
+            background-color: #FCFEFC;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 100px;
+            color: #f368e0;
+        }
+        h2{
+            position: relative;
+            top: 60px;
+            color: #1abc9c;
+            display: inline-block;
+            margin-left: 180px;
+        }
+        img{
+            width: 200px;
+        }
+        #lineBottom{
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<h1>JS Que</h1>
+
+<h2>A</h2>
+<h2>B</h2>
+<h2>C</h2>
+<h2>D</h2>
+<h2>E</h2>
+<h2>F</h2>
+
+<img src="https://media.tenor.com/HuT-8650uz0AAAAC/berjalan-walking.gif" alt="">
+<img src="https://media.tenor.com/HuT-8650uz0AAAAC/berjalan-walking.gif" alt="">
+<img src="https://media.tenor.com/HuT-8650uz0AAAAC/berjalan-walking.gif" alt="">
+<img src="https://media.tenor.com/HuT-8650uz0AAAAC/berjalan-walking.gif" alt="">
+<img src="https://media.tenor.com/HuT-8650uz0AAAAC/berjalan-walking.gif" alt="">
+<img src="https://media.tenor.com/HuT-8650uz0AAAAC/berjalan-walking.gif" alt="">
+
+<div id="lineBottom"></div>
+
+<script src="assets/lib/jQuery/jquery-3.6.1.min.js"></script>
+<script>
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    let count = 0;
+    setInterval(changeLetter, 1000);
+    function changeLetter() {
+        if (count === letters.length){
+            count = 0;
+        }
+        for (let i=0; i < letters.length; i++){
+            let index = i-count ;
+            $('h2').eq(i).text(letters[(index<0)?6+index:index]);
+        }
+        count++;
+    }
+</script>
+</body>
+</html>

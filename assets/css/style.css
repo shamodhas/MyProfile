@@ -890,8 +890,6 @@ header nav ul li a.active-nav-btn {
     width: 25%;
 }
 
-.btn-contact:hover {}
-
 @media (max-width: 600px) {
     .gallery-list {
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
@@ -1135,17 +1133,17 @@ header nav ul li a.active-nav-btn {
     flex-direction: column;
     flex: 0 0 100%;
     padding: 20px;
-    background-size: cover;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
     scroll-snap-align: start;
     transition: all 0.2s;
 }
 
-.project_image{
+.project_image {
     border-radius: 15px;
     width: 100%;
 }
+
 .card:not(:last-child) {
     margin-right: 10px;
 }
@@ -1157,12 +1155,13 @@ header nav ul li a.active-nav-btn {
 
 .card .card-title {
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .card .card-content {
-    margin: 20px 0;
-    max-width: 85%;
+    margin: 10px 0;
+    font-size: 14px;
+    width: 100%;
 }
 
 .card .card-link-wrapper {
@@ -1174,6 +1173,16 @@ header nav ul li a.active-nav-btn {
     text-decoration: none;
     color: white;
     background: var(--yelow);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.card .card-demo{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #0073ff;
     padding: 6px 12px;
     border-radius: 8px;
     transition: background 0.2s;
@@ -1193,7 +1202,7 @@ header nav ul li a.active-nav-btn {
 }
 
 .cards::-webkit-scrollbar-thumb {
-    background: #000;
+    background: var(--yelow);
 }
 
 .cards::-webkit-scrollbar-track {

@@ -4,9 +4,10 @@ const projects = [
     {
         id: 1,
         title: "Online Movie Ticket Booking - Full Stack",
-        image: "",
+        image: "assets/image/project/mtb.png",
         content: "MERN Stack- <b>React, TypeScript, Node.js, Express.js, MongoDB</b>, TailwindCSS, Vite",
-        link: "assets/project/mtb.html"
+        link: "assets/project/mtb.html",
+        demo: "dsvc"
     }, {
         id: 2,
         title: "Travel Planning System - Full Stack",
@@ -78,7 +79,8 @@ const projects = [
         title: "Student Data Mini Project - Full Stack",
         image: "",
         content: "Student data crud project.<b>React js</b>, <b>JavaEE 8</b>, <b>JDBC</b>, <b>Tomcat 9</b>",
-        link: "assets/project/sdmp.html"
+        link: "assets/project/sdmp.html",
+        demo: "fdv"
     }
 ]
 
@@ -96,7 +98,8 @@ const loadProject = () => {
                 </div>
             </div>
             <div class="card-link-wrapper">
-                <a target="_blank" href="${project.link}" class="card-link">see here</a>
+                <a target="_blank" href="${project.link}" class="card-link">Source Code</a>
+                ${project.demo ? `<a target="_blank" href="${project.demo}" class="card-demo">Use it</a>` : ""}
             </div>
         </li>
     `;

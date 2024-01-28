@@ -23,7 +23,7 @@ const projects = [
     }, {
         id: 4,
         title: "Web Pos - (This is in commercial use in a shop)",
-        image: "",
+        image: "assets/image/project/pos.jpg",
         content: "<b>React, Firebase</b>",
         link: "assets/project/msms.html"
     }, {
@@ -92,7 +92,7 @@ const loadProject = () => {
         <li class="card">
             <div>
                 <h3 class="card-title">${project.title}</h3>
-                <img class="project_image" src="${project.image}" alt="">
+                <img class="project_image" src="${project.image ? project.image : "https://source.unsplash.com/7mUXaBBrhoA/800x533"}" alt="">
                 <div class="card-content">
                     <p>${project.content}</p>
                 </div>

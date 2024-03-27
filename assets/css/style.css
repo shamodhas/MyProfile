@@ -130,8 +130,7 @@ header nav ul li a.active-nav-btn {
 
 .home-my-image img {
   border-radius: 45px;
-  max-width: 400px;
-  width: 100%;
+  max-width: 350px;
 }
 
 #main .home-my-image img:hover {

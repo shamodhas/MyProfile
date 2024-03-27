@@ -89,11 +89,6 @@ header nav ul li a.active-nav-btn {
 }
 
 .menu-toggle {
-  color: #f1c40f;
-  float: left;
-  line-height: 50px;
-  font-size: 36px;
-  cursor: pointer;
   display: none;
 }
 
@@ -273,7 +268,8 @@ header nav ul li a.active-nav-btn {
 }
 
 .project-section {
-  display: block;
+  position: relative;
+  /* display: block; */
 }
 
 .my-project-carousel {
@@ -1042,7 +1038,8 @@ header nav ul li a.active-nav-btn {
   }
 
   #main {
-    padding: 100px 0 0 0;
+    height: 100vh;
+    padding: 20px 0;
   }
 
   .home-my-image img {
@@ -1063,21 +1060,34 @@ header nav ul li a.active-nav-btn {
     margin-top: 0;
   }
 
+  header {
+    position: relative;
+    background-color: #333333;
+    padding: 24px 30px;
+  }
+
   .menu-toggle {
     display: block;
     color: #ffffff;
+  }
+
+  .menu-toggle i {
+    color: #fff;
+    font-size: 40px;
+  }
+
+  .menu-toggle button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 30px;
+    border-radius: 15px;
     background-color: #333333;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 46px;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
+    border: 1px solid #fff;
   }
 
   header nav ul li a {
-    height: 50px;
+    height: 60px;
     line-height: 50px;
     color: #fff;
     text-decoration: none;
@@ -1096,9 +1106,9 @@ header nav ul li a.active-nav-btn {
   header nav {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 50px);
-    background: #333;
-    top: 50px;
+    padding: 60px 0 20px 0;
+    background-color: #393939;
+    top: 145px;
     left: -100%;
     transition: 0.5s;
   }
@@ -1157,16 +1167,20 @@ header nav ul li a.active-nav-btn {
 }
 
 .project_container {
-  width: 90%;
-  padding: 15px;
+  width: 100%;
+  padding: 15px 0;
   margin: 0 auto;
 }
 
 .cards {
+  overflow-x: scroll;
+  padding: 0 60px;
+}
+
+.cards ul {
   display: flex;
   padding: 25px 0px;
   list-style: none;
-  overflow-x: scroll;
 }
 
 .card {
@@ -1178,6 +1192,32 @@ header nav ul li a.active-nav-btn {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
   scroll-snap-align: start;
   transition: all 0.2s;
+}
+
+.project-section .box {
+  position: absolute;
+  cursor: pointer;
+  width: 50px;
+  top: 40px;
+  height: 90%;
+  background-color: #0000001f;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-section .box:hover {
+  background-color: #00000049;
+}
+
+.project-section .box-left {
+  border-radius: 0 15px 15px 0;
+  left: 0;
+}
+.project-section .box-right {
+  border-radius: 15px 0 0 15px;
+  right: 5px;
 }
 
 .project_image {

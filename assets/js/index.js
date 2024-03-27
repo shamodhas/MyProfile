@@ -1,197 +1,312 @@
-AOS.init();
+AOS.init()
 
 const projects = [
-    {
-        id: 1,
-        title: "Online Movie Ticket Booking - Full Stack",
-        image: "assets/image/project/mtb.png",
-        content: "MERN Stack- <b>React, TypeScript, Node.js, Express.js, MongoDB</b>, TailwindCSS, Vite",
-        link: "assets/project/mtb.html",
-        demo: "dsvc"
-    }, {
-        id: 2,
-        title: "Travel Planning System - Full Stack",
-        image: "",
-        content: "About <b>Spring Boot</b>, <b>Microservice</b>, Spring Web MVC / <b>Spring Security</b> / Spring Data / Spring Validation / <b>Java</b> / MySql / MongoDB / HTML / CSS / JavaScript / <b>JWT</b>",
-        link: "https://github.com/shamodhaSahan/Travel-Planning-System"
-    }, {
-        id: 3,
-        title: "Calculator - Mobile Development",
-        image: "",
-        content: "This is a simple calculator. It is designed very simply with simple math methods and accurate ux.<b>React Native</b>",
-        link: "https://github.com/shamodhaSahan/Calculator_Mobile_Application_React_Native"
-    }, {
-        id: 4,
-        title: "Web Pos - (This is in commercial use in a shop)",
-        image: "assets/image/project/pos.jpg",
-        content: "<b>React, Firebase</b>",
-        link: "assets/project/msms.html"
-    }, {
-        id: 5,
-        title: "Pos - Backend",
-        image: "",
-        content: "There are two backgrounds with Auth Security. <b>Spring Boot / Spring MVC</b>",
-        link: "assets/project/pos_backend.html"
-    }, {
-        id: 6,
-        title: "Connect Four - OOP",
-        image: "assets/image/project/oop.png",
-        content: "This is a task project to learn oop concept from github. Here it is complete and <b>simple AI</b> design built by min-max algorithm",
-        link: "https://github.com/shamodhaSahan/oop-final-connect-four"
-    }, {
-        id: 7,
-        title: "Calculator - Web Development",
-        image: "",
-        content: "This is a simple calculator. It is designed very simply with simple math methods and accurate ux.<b>Html, Css, JavaScript</b>",
-        link: "https://github.com/shamodhaSahan/web-calculator"
-    }, {
-        id: 8,
-        title: "Computer Shop Management System - Desktop",
-        image: "assets/image/project/csms.png",
-        content: "An application designed for a mange computer shop.Available in both <b>MVC</b> and <b>Layered</b> architecture. Javafx, Java, Maven, MySql, jdbc. oop",
-        link: "assets/project/csms.html"
-    }, {
-        id: 9,
-        title: "Warehouse Management System",
-        image: "assets/image/project/warehouse.jpg",
-        content: "An application designed to manage storage space. <b>Java Swing</b>, <b>jdbc</b>,<b>oop</b>, <b>Layered</b> architecture",
-        link: "https://github.com/shamodhaSahan/Warehouse-Management-System"
-    }, {
-        id: 10,
-        title: "Hostel Management System",
-        image: "assets/image/project/orm.jpg",
-        content: "An application designed for a hostel to handle customer, user, students and rooms. <b>Javafx</b>, <b>Java</b>, <b>Maven</b>, <b>Hibernate</b>, MySql, <b>Layered</b> architecture",
-        link: "https://github.com/shamodhaSahan/Hostel-Management-System"
-    }, {
-        id: 11,
-        title: " Group Chat Application",
-        image: "assets/image/project/chatApp.png",
-        content: "This is a chat application for a group chat. <b>Java</b>, java <b>socket</b> programming",
-        link: "https://github.com/shamodhaSahan/Group-Chat-Application"
-    }, {
-        id: 12,
-        title: "My Personal Web Site",
-        image: "",
-        content: "Html, Css, JavaScript",
-        link: "https://github.com/shamodhaSahan/MyProfile"
-    }, {
-        id: 13,
-        title: "Student Data Mini Project - Full Stack",
-        image: "",
-        content: "Student data crud project.<b>React js</b>, <b>JavaEE 8</b>, <b>JDBC</b>, <b>Tomcat 9</b>",
-        link: "assets/project/sdmp.html",
-        demo: "fdv"
-    }
+  {
+    id: 1,
+    title: "Online Movie Ticket Booking - Full Stack",
+    image: "assets/image/project/mtb.png",
+    content:
+      "MERN Stack- <b>React, TypeScript, Node.js, Express.js, MongoDB</b>, TailwindCSS, Vite",
+    link: "assets/project/mtb.html",
+    demo: "dsvc"
+  },
+  {
+    id: 2,
+    title: "Travel Planning System - Full Stack",
+    image: "",
+    content:
+      "About <b>Spring Boot</b>, <b>Microservice</b>, Spring Web MVC / <b>Spring Security</b> / Spring Data / Spring Validation / <b>Java</b> / MySql / MongoDB / HTML / CSS / JavaScript / <b>JWT</b>",
+    link: "https://github.com/shamodhaSahan/Travel-Planning-System"
+  },
+  {
+    id: 3,
+    title: "Calculator - Mobile Development",
+    image: "",
+    content:
+      "This is a simple calculator. It is designed very simply with simple math methods and accurate ux.<b>React Native</b>",
+    link: "https://github.com/shamodhaSahan/Calculator_Mobile_Application_React_Native"
+  },
+  {
+    id: 4,
+    title: "Web Pos - (This is in commercial use in a shop)",
+    image: "assets/image/project/pos.jpg",
+    content: "<b>React, Firebase</b>",
+    link: "assets/project/msms.html"
+  },
+  {
+    id: 5,
+    title: "Pos - Backend",
+    image: "",
+    content:
+      "There are two backgrounds with Auth Security. <b>Spring Boot / Spring MVC</b>",
+    link: "assets/project/pos_backend.html"
+  },
+  {
+    id: 6,
+    title: "Connect Four - OOP",
+    image: "assets/image/project/oop.png",
+    content:
+      "This is a task project to learn oop concept from github. Here it is complete and <b>simple AI</b> design built by min-max algorithm",
+    link: "https://github.com/shamodhaSahan/oop-final-connect-four"
+  },
+  {
+    id: 7,
+    title: "Calculator - Web Development",
+    image: "",
+    content:
+      "This is a simple calculator. It is designed very simply with simple math methods and accurate ux.<b>Html, Css, JavaScript</b>",
+    link: "https://github.com/shamodhaSahan/web-calculator"
+  },
+  {
+    id: 8,
+    title: "Computer Shop Management System - Desktop",
+    image: "assets/image/project/csms.png",
+    content:
+      "An application designed for a mange computer shop.Available in both <b>MVC</b> and <b>Layered</b> architecture. Javafx, Java, Maven, MySql, jdbc. oop",
+    link: "assets/project/csms.html"
+  },
+  {
+    id: 9,
+    title: "Warehouse Management System",
+    image: "assets/image/project/warehouse.jpg",
+    content:
+      "An application designed to manage storage space. <b>Java Swing</b>, <b>jdbc</b>,<b>oop</b>, <b>Layered</b> architecture",
+    link: "https://github.com/shamodhaSahan/Warehouse-Management-System"
+  },
+  {
+    id: 10,
+    title: "Hostel Management System",
+    image: "assets/image/project/orm.jpg",
+    content:
+      "An application designed for a hostel to handle customer, user, students and rooms. <b>Javafx</b>, <b>Java</b>, <b>Maven</b>, <b>Hibernate</b>, MySql, <b>Layered</b> architecture",
+    link: "https://github.com/shamodhaSahan/Hostel-Management-System"
+  },
+  {
+    id: 11,
+    title: " Group Chat Application",
+    image: "assets/image/project/chatApp.png",
+    content:
+      "This is a chat application for a group chat. <b>Java</b>, java <b>socket</b> programming",
+    link: "https://github.com/shamodhaSahan/Group-Chat-Application"
+  },
+  {
+    id: 12,
+    title: "My Personal Web Site",
+    image: "",
+    content: "Html, Css, JavaScript",
+    link: "https://github.com/shamodhaSahan/MyProfile"
+  },
+  {
+    id: 13,
+    title: "Student Data Mini Project - Full Stack",
+    image: "",
+    content:
+      "Student data crud project.<b>React js</b>, <b>JavaEE 8</b>, <b>JDBC</b>, <b>Tomcat 9</b>",
+    link: "assets/project/sdmp.html",
+    demo: "fdv"
+  }
 ]
 
-const loadProject = () => {
-    var projectCards = document.getElementById('project_cards');
-    projectCards.innerHTML = ''
-    projects.map(project => {
-        projectCards.innerHTML += `
-        <li class="card">
-            <div>
-                <h3 class="card-title">${project.title}</h3>
-                <img class="project_image" src="${project.image ? project.image : "https://source.unsplash.com/7mUXaBBrhoA/800x533"}" alt="">
-                <div class="card-content">
-                    <p>${project.content}</p>
-                </div>
-            </div>
-            <div class="card-link-wrapper">
-                <a target="_blank" href="${project.link}" class="card-link">Source Code</a>
-                ${project.demo ? `<a target="_blank" href="${project.demo}" class="card-demo">Use it</a>` : ""}
-            </div>
-        </li>
-    `;
-    });
+document
+  .getElementById("project-section-right")
+  .addEventListener("click", function () {
+    var container = document.querySelector(".cards")
+    container.scrollLeft = container.scrollWidth - container.clientWidth
+    checkScrollEnd(container)
+  })
+
+document
+  .getElementById("project-section-left")
+  .addEventListener("click", function () {
+    var container = document.querySelector(".cards")
+    container.scrollLeft = -container.clientWidth
+    checkScrollEnd(container)
+  })
+
+function checkScrollEnd(container) {
+  var scrollLeft = container.scrollLeft
+  var maxScrollLeft = container.scrollWidth - container.clientWidth
+
+  var scrollToLeftButton = document.getElementById("project-section-left")
+  var scrollToRightButton = document.getElementById("project-section-right")
+
+  if (scrollLeft === 0) {
+    scrollToLeftButton.style.display = "none"
+  } else {
+    scrollToLeftButton.style.display = "flex"
+  }
+
+  if (scrollLeft === maxScrollLeft) {
+    scrollToRightButton.style.display = "none"
+  } else {
+    scrollToRightButton.style.display = "flex"
+  }
 }
 
-loadProject();
+window.addEventListener("load", function () {
+  var container = document.querySelector(".cards")
+  checkScrollEnd(container)
+})
 
+document.querySelector(".cards").addEventListener("scroll", function () {
+  var container = document.querySelector(".cards")
+  checkScrollEnd(container)
+})
+
+const loadProject = () => {
+  var projectCards = document.getElementById("project_list_1")
+  var projectCards2 = document.getElementById("project_list_2")
+  projectCards.innerHTML = ""
+  projectCards2.innerHTML = ""
+  projects.map((project, index) => {
+    if (index < projects.length / 2) {
+      projectCards.innerHTML += `
+            <li class="card">
+                <div>
+                    <h3 class="card-title">${index + 1}. ${project.title}</h3>
+                    <img class="project_image" src="${
+                      project.image
+                        ? project.image
+                        : "https://source.unsplash.com/7mUXaBBrhoA/800x533"
+                    }" alt="">
+                    <div class="card-content">
+                        <p>${project.content}</p>
+                    </div>
+                </div>
+                <div class="card-link-wrapper">
+                    <a target="_blank" href="${
+                      project.link
+                    }" class="card-link">Source Code</a>
+                    ${
+                      project.demo
+                        ? `<a target="_blank" href="${project.demo}" class="card-demo">Use it</a>`
+                        : ""
+                    }
+                </div>
+            </li>
+        `
+    } else {
+      projectCards2.innerHTML += `
+            <li class="card">
+                <div>
+                    <h3 class="card-title">${index + 1}. ${project.title}</h3>
+                    <img class="project_image" src="${
+                      project.image
+                        ? project.image
+                        : "https://source.unsplash.com/7mUXaBBrhoA/800x533"
+                    }" alt="">
+                    <div class="card-content">
+                        <p>${project.content}</p>
+                    </div>
+                </div>
+                <div class="card-link-wrapper">
+                    <a target="_blank" href="${
+                      project.link
+                    }" class="card-link">Source Code</a>
+                    ${
+                      project.demo
+                        ? `<a target="_blank" href="${project.demo}" class="card-demo">Use it</a>`
+                        : ""
+                    }
+                </div>
+            </li>
+        `
+    }
+  })
+}
+
+loadProject()
 
 window.addEventListener("scroll", function (e) {
-    const squared = document.querySelector(".trapezoid");
-    squared.classList.toggle("trapezoid-hide", window.scrollY > 150);
-    if ($(window).width() < 992) {
-        skillLoad(2300, 5000);
-    } else {
-        skillLoad(2400, 3401);
-        const header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0)
-    }
-});
+  const squared = document.querySelector(".trapezoid")
+  squared.classList.toggle("trapezoid-hide", window.scrollY > 150)
+  if ($(window).width() < 992) {
+    skillLoad(2300, 5000)
+  } else {
+    skillLoad(2400, 3401)
+    const header = document.querySelector("header")
+    header.classList.toggle("sticky", window.scrollY > 0)
+  }
+})
 
 function skillLoad(start, down) {
-    if (window.scrollY < start || window.scrollY > down) {
-        $('.percent').css("display", "none")
-    } else {
-        $('.percent').css("display", "block")
-    }
-};
+  if (window.scrollY < start || window.scrollY > down) {
+    $(".percent").css("display", "none")
+  } else {
+    $(".percent").css("display", "block")
+  }
+}
 
-$('.menu-toggle').click(function () {
-    $('nav').toggleClass('active');
-});
+$(".menu-toggle").click(function () {
+  $("nav").toggleClass("active")
+})
 
+$("nav li a").click(function () {
+  $("nav").removeClass("active")
+})
 
-const gallery = document.querySelector('#gallery-list');
+const gallery = document.querySelector("#gallery-list")
 const getVal = function (elem, style) {
-    return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
-};
+  return parseInt(window.getComputedStyle(elem).getPropertyValue(style))
+}
 const getHeight = function (item) {
-    return item.querySelector('.content').getBoundingClientRect().height;
-};
+  return item.querySelector(".content").getBoundingClientRect().height
+}
 const resizeAll = function () {
-    const altura = getVal(gallery, 'grid-auto-rows');
-    const gap = getVal(gallery, 'grid-row-gap');
-    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-        item.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
-    });
-};
-gallery.querySelectorAll('img').forEach(function (item) {
-    item.classList.add('byebye');
-    if (item.complete) {
-        console.log(item.src);
-    }
-    else {
-        item.addEventListener('load', function () {
-            const altura = getVal(gallery, 'grid-auto-rows');
-            const gap = getVal(gallery, 'grid-row-gap');
-            const gitem = item.parentElement.parentElement;
-            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-            item.classList.remove('byebye');
-        });
-    }
-});
+  const altura = getVal(gallery, "grid-auto-rows")
+  const gap = getVal(gallery, "grid-row-gap")
+  gallery.querySelectorAll(".gallery-item").forEach(function (item) {
+    item.style.gridRowEnd =
+      "span " + Math.ceil((getHeight(item) + gap) / (altura + gap))
+  })
+}
+gallery.querySelectorAll("img").forEach(function (item) {
+  item.classList.add("byebye")
+  if (item.complete) {
+    console.log(item.src)
+  } else {
+    item.addEventListener("load", function () {
+      const altura = getVal(gallery, "grid-auto-rows")
+      const gap = getVal(gallery, "grid-row-gap")
+      const gitem = item.parentElement.parentElement
+      gitem.style.gridRowEnd =
+        "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap))
+      item.classList.remove("byebye")
+    })
+  }
+})
 
-window.addEventListener('resize', resizeAll);
-gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-    item.addEventListener('click', function () {
-        item.classList.toggle('full');
-    });
-});
+window.addEventListener("resize", resizeAll)
+gallery.querySelectorAll(".gallery-item").forEach(function (item) {
+  item.addEventListener("click", function () {
+    item.classList.toggle("full")
+  })
+})
 
-const textWrapper = document.querySelector('.home-job');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+const textWrapper = document.querySelector(".home-job")
+textWrapper.innerHTML = textWrapper.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+)
 
-anime.timeline({ loop: true })
-    .add({
-        targets: '.home-job .letter',
-        scale: [4, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "easeOutExpo",
-        duration: 950,
-        delay: (el, i) => 70 * i
-    }).add({
-        targets: '.home-job',
-        opacity: 0,
-        duration: 0,
-        easing: "easeOutExpo",
-        delay: 0
-    });
-
-
+anime
+  .timeline({ loop: true })
+  .add({
+    targets: ".home-job .letter",
+    scale: [4, 1],
+    opacity: [0, 1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70 * i
+  })
+  .add({
+    targets: ".home-job",
+    opacity: 0,
+    duration: 0,
+    easing: "easeOutExpo",
+    delay: 0
+  })
 
 // // project carousel
 // const project_name = [
@@ -272,4 +387,3 @@ anime.timeline({ loop: true })
 //         console.log(project_index)
 //     }
 // }
-

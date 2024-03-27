@@ -1070,8 +1070,8 @@ header nav ul li a.active-nav-btn {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 36px !important;
-    padding: 5px 20px;
+    font-size: 46px;
+    padding: 10px 20px;
     width: 100%;
     box-sizing: border-box;
   }

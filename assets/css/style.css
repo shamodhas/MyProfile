@@ -114,9 +114,18 @@ header nav ul li a.active-nav-btn {
 }
 
 #main .personal-container {
+  position: relative;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-my-image img {

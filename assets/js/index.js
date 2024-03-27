@@ -130,13 +130,13 @@ function checkScrollEnd(container) {
   var scrollToLeftButton = document.getElementById("project-section-left")
   var scrollToRightButton = document.getElementById("project-section-right")
 
-  if (scrollLeft <= 0) {
+  if (scrollLeft < 5) {
     scrollToLeftButton.style.display = "none"
   } else {
     scrollToLeftButton.style.display = "flex"
   }
 
-  if (scrollLeft >= maxScrollLeft) {
+  if (scrollLeft > maxScrollLeft-5) {
     scrollToRightButton.style.display = "none"
   } else {
     scrollToRightButton.style.display = "flex"

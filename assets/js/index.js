@@ -136,7 +136,7 @@ function checkScrollEnd(container) {
     scrollToLeftButton.style.display = "flex"
   }
 
-  if (scrollLeft > maxScrollLeft-5) {
+  if (scrollLeft > maxScrollLeft - 5) {
     scrollToRightButton.style.display = "none"
   } else {
     scrollToRightButton.style.display = "flex"
@@ -217,17 +217,36 @@ const loadProject = () => {
 
 loadProject()
 
-window.addEventListener("scroll", function (e) {
-  const squared = document.querySelector(".trapezoid")
-  squared.classList.toggle("trapezoid-hide", window.scrollY > 150)
-  if ($(window).width() < 992) {
-    skillLoad(2300, 5000)
-  } else {
-    skillLoad(2400, 3401)
-    const header = document.querySelector("header")
-    header.classList.toggle("sticky", window.scrollY > 0)
-  }
-})
+setInterval(() => {
+  console.log("object")
+  $(".percent").css("display", "none")
+
+  setTimeout(() => {
+    $(".percent").css("display", "block")
+  }, 50)
+}, 5000)
+// setInterval(() => {
+//   console.log("object")
+//   // if (window.innerWidth < 992) {
+//   //   skillLoad(2300, 5000)
+//   // } else {
+//   //   skillLoad(2400, 3401)
+//   // }
+//   $(".percent").css("display", "none")
+//   $(".percent").css("display", "block")
+// }, 4000)
+
+// window.addEventListener("scroll", function (e) {
+//   const squared = document.querySelector(".trapezoid")
+//   squared.classList.toggle("trapezoid-hide", window.scrollY > 150)
+//   if ($(window).width() < 992) {
+//     skillLoad(2300, 5000)
+//   } else {
+//     skillLoad(2400, 3401)
+//     const header = document.querySelector("header")
+//     header.classList.toggle("sticky", window.scrollY > 0)
+//   }
+// })
 
 function skillLoad(start, down) {
   if (window.scrollY < start || window.scrollY > down) {
